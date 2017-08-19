@@ -1,5 +1,6 @@
 class BooksController < ApplicationController
   before_action :set_book, only: [:show, :edit, :update, :destroy]
+  after_save :increment_user_books_size
 
   # GET /books
   # GET /books.json
@@ -60,6 +61,11 @@ class BooksController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  private
+    def increment_user_books_size
+      self.user.increment!(:books_size)
+    end
 
   private
     # Use callbacks to share common setup or constraints between actions.
