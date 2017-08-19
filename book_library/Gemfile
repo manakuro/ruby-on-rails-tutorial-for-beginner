@@ -55,3 +55,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # HTML template engine
 gem 'slim-rails'
+
+# Testing
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0.0'
+end
