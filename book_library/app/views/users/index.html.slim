@@ -1,0 +1,17 @@
+h1
+  | 利用者一覧
+table
+  thead
+    tr
+      th
+        | 氏名
+      th
+        | 部署
+  tbody
+    - @users.each do |user|
+      tr
+        td
+          = link_to user.name, user_path(user)
+        td
+          = user.department
+    = link_to '新規ユーザ登録', new_user_path

@@ -1,0 +1,17 @@
+p#notice
+  = notice
+p
+  strong
+    | Title:
+  = @book.title
+p
+  strong
+    | Author:
+  = @book.author
+p
+  strong
+    | Outline:
+  = @book.outline
+= link_to 'Edit', edit_book_path(@book)
+|  | 
+= link_to 'Back', books_path

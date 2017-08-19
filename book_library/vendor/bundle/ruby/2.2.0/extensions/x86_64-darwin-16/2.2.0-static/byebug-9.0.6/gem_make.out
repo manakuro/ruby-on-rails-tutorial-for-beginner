@@ -1,0 +1,15 @@
+/Users/kuromana_air/.rbenv/versions/2.2.2/bin/ruby -r ./siteconf20170818-16718-pnstxz.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.bundle
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.bundle ./.gem.20170818-16718-1lu6njn/byebug
